@@ -44,7 +44,7 @@ void Clock1::run()
 		tick();
 		show();
 	}
-	cout<<endl<<"Ê±¼äµ½ÁË£¡"<<endl;
+	cout<<endl<<"æ—¶é—´åˆ°äº†ï¼"<<endl;
 	cout<<'\a';
 	system("pause");
 	system("cls");
@@ -104,141 +104,170 @@ Clock2::~Clock2()
 int main(){
 	system("title Loading...");
 	system("color a");
+	//ç¬¬ä¸€ç§åŠ è½½åŠ¨ç”»
 	cout<<"Loading";
-	Sleep(100);
+	Sleep(1000);
 	system("cls");
 	cout<<"Loading.";
-	Sleep(100);
+	Sleep(1000);
 	system("cls");
 	cout<<"Loading..";
-	Sleep(100);
+	Sleep(1000);
 	system("cls");
 	cout<<"Loading...";
-	Sleep(100);
+	Sleep(1000);
 	system("cls");
-	system("title Kendall OS - Ö÷½çÃæ");
+	/*
+	ç¬¬äºŒç§åŠ è½½åŠ¨ç”»
+	cout<<"|";
+	Sleep(1000);
+	system("cls");
+	cout<<"/";
+	Sleep(1000);
+	system("cls");
+	cout<<"-";
+	Sleep(1000);
+	system("cls");
+	cout<<"\\";
+	Sleep(1000);
+	system("cls");
+	ç¬¬ä¸‰ç§åŠ è½½åŠ¨ç”»
+	cout<<"0oo";
+	Sleep(1000);
+	system("cls");
+	cout<<"o0o";
+	Sleep(1000);
+	system("cls");
+	cout<<"oo0";
+	Sleep(1000);
+	system("cls");
+	cout<<"o0o";
+	Sleep(1000);
+	system("cls");
+	*/
+	system("title Kendall OS - ä¸»ç•Œé¢");
 	while(1){
-		cout<<"¸ĞĞ»²ÎÓëKendall OSÄÚ²â£¡"<<endl;
-		cout<<"1.µ¹¼ÆÊ±    2.Õı¼ÆÊ±"<<endl;
-		cout<<"3.ÊıÑ§¼ÆËã  4.·êÆß±Ø¹ı"<<endl;
-		cout<<"5.¹ØÓÚ"<<endl;
+		cout<<"æ„Ÿè°¢å‚ä¸Kendall OSå†…æµ‹ï¼"<<endl;
+		cout<<"1.å€’è®¡æ—¶    2.æ­£è®¡æ—¶"<<endl;
+		cout<<"3.æ•°å­¦è®¡ç®—  4.é€¢ä¸ƒå¿…è¿‡"<<endl;
+		cout<<"5.å…³äº"<<endl;
 		int Choose1;
 		cin>>Choose1;
 		switch(Choose1){
 			case 1:{
-				system("title Kendall OS - µ¹¼ÆÊ±");
+				system("title Kendall OS - å€’è®¡æ—¶");
 				Clock1 c;
-				cout<<"ÇëÊäÈëµ¹¼ÆÊ±µÄÊ±³¤£º";
+				cout<<"è¯·è¾“å…¥å€’è®¡æ—¶çš„æ—¶é•¿ï¼š";
 				int h1,m1,s1;
 				cin>>h1>>m1>>s1;
 				c.set(h1,m1,s1);
 				c.run();
-				system("title Kendall OS - Ö÷½çÃæ");
+				system("title Kendall OS - ä¸»ç•Œé¢");
 				break;
 			}
 			case 2:{	
-				system("title Kendall OS - Õı¼ÆÊ±");
+				system("title Kendall OS - æ­£è®¡æ—¶");
 				Clock2 c;
 				c.run();
 				system("pause");
-				system("title Kendall OS - Ö÷½çÃæ");
+				system("title Kendall OS - ä¸»ç•Œé¢");
 				break;
 			}
 			case 3:{
-				system("title Kendall OS - ÊıÑ§¼ÆËã");
+				system("title Kendall OS - æ•°å­¦è®¡ç®—");
 				int Choose2;
-				cout<<"ÄãÒª½øĞĞÊ²Ã´ÊıÑ§¼ÆËã£¿"<<endl;
-				cout<<"1.×î´ó¹«ÒòÊı    2.×îĞ¡¹«±¶Êı    3.Ô²    4.Ô²Öù"<<endl;
+				cout<<"ä½ è¦è¿›è¡Œä»€ä¹ˆæ•°å­¦è®¡ç®—ï¼Ÿ"<<endl;
+				cout<<"1.æœ€å¤§å…¬å› æ•°    2.æœ€å°å…¬å€æ•°    3.åœ†    4.åœ†æŸ±"<<endl;
 				cin>>Choose2;
 				switch(Choose2){
 					case 1:{
-						system("title Kendall OS - ×î´ó¹«ÒòÊı¼ÆËãÆ÷");
+						system("title Kendall OS - æœ€å¤§å…¬å› æ•°è®¡ç®—å™¨");
 						int n0,n1,p,max;
-						cout<<"ÊäÈë(²»µÃ³¬¹ı2147483647µÄÁ½¸öÕûÊı ¿Õ¸ñ¸ô¿ª)£º";
+						cout<<"è¾“å…¥(ä¸å¾—è¶…è¿‡2147483647çš„ä¸¤ä¸ªæ•´æ•° ç©ºæ ¼éš”å¼€)ï¼š";
 						cin>>n0>>n1;
-						if(n0<0||n1<0)cout<<"±ğÊÅÁË£¬ÎÒÒÑ¾­¿¼ÂÇµ½ÁË¡£"<<endl;
-						else if(n0==0||n1==0)cout<<"0£¿£¿£¿Äã¸øÎÒ¸éÕâÊÅBugÄØ£¿£¿£¿"<<endl;
+						if(n0<0||n1<0)cout<<"åˆ«é€äº†ï¼Œæˆ‘å·²ç»è€ƒè™‘åˆ°äº†ã€‚"<<endl;
+						else if(n0==0||n1==0)cout<<"0ï¼Ÿï¼Ÿï¼Ÿä½ ç»™æˆ‘æè¿™é€Bugå‘¢ï¼Ÿï¼Ÿï¼Ÿ"<<endl;
 						else{
 							if(n0>n1)max=n0;
 							else if(n0<n1)max=n1;
 							else if(n0=n1)max=n0;
-							cout<<"³¢ÊÔÖĞ¡­¡­";
+							cout<<"å°è¯•ä¸­â€¦â€¦";
 							for(int i=max-1;;i--){ 
 								if(n0%i==0&&n1%i==0){
-									cout<<"³É¹¦£¡"<<endl;
+									cout<<"æˆåŠŸï¼"<<endl;
 									p=i;
 									break;
 								}
 							}
 						}
-						if(p==1)cout<<n0<<"Óë"<<n1<<"ÊÇ»¥ÖÊµÄ£¬ËùÒÔ";
-						cout<<n0<<"Óë"<<n1<<"µÄ×î´ó¹«ÒòÊıÊÇ"<<p<<endl;
+						if(p==1)cout<<n0<<"ä¸"<<n1<<"æ˜¯äº’è´¨çš„ï¼Œæ‰€ä»¥";
+						cout<<n0<<"ä¸"<<n1<<"çš„æœ€å¤§å…¬å› æ•°æ˜¯"<<p<<endl;
 						system("pause");
-						system("title Kendall OS - Ö÷½çÃæ");
+						system("title Kendall OS - ä¸»ç•Œé¢");
 						system("cls"); 
 						break;
 					}
 					case 2:{
-						system("title Kendall OS - ×îĞ¡¹«±¶Êı¼ÆËãÆ÷");
+						system("title Kendall OS - æœ€å°å…¬å€æ•°è®¡ç®—å™¨");
 						int n0,n1,p,max;
-						cout<<"ÊäÈë(²»µÃ³¬¹ı2147483647µÄÁ½¸öÕûÊı ¿Õ¸ñ¸ô¿ª)£º";
+						cout<<"è¾“å…¥(ä¸å¾—è¶…è¿‡2147483647çš„ä¸¤ä¸ªæ•´æ•° ç©ºæ ¼éš”å¼€)ï¼š";
 						cin>>n0>>n1;
-						if(n0<0||n1<0)cout<<"±ğÊÅÁË£¬ÎÒÒÑ¾­¿¼ÂÇµ½ÁË¡£"<<endl;
-						else if(n0==0||n1==0)cout<<"0£¿£¿£¿Äã¸øÎÒ¸éÕâÊÅBugÄØ£¿£¿£¿"<<endl;
-						else if(n0==n1)cout<<"ÕâÁ©Ò»Ñù°¡"<<endl;
+						if(n0<0||n1<0)cout<<"åˆ«é€äº†ï¼Œæˆ‘å·²ç»è€ƒè™‘åˆ°äº†ã€‚"<<endl;
+						else if(n0==0||n1==0)cout<<"0ï¼Ÿï¼Ÿï¼Ÿä½ ç»™æˆ‘æè¿™é€Bugå‘¢ï¼Ÿï¼Ÿï¼Ÿ"<<endl;
+						else if(n0==n1)cout<<"è¿™ä¿©ä¸€æ ·å•Š"<<endl;
 						else{
 							if(n0>n1)max=n0;
 							else if(n0<n1)max=n1;
 							else if(n0=n1)max=n0;
-							cout<<"»ñÈ¡×îĞ¡¹«±¶ÊıÖĞ¡­¡­";
+							cout<<"è·å–æœ€å°å…¬å€æ•°ä¸­â€¦â€¦";
 							for(int i=max-1;;i--){ 
 								if(n0%i==0&&n1%i==0){
-									cout<<"³É¹¦£¡"<<endl;
+									cout<<"æˆåŠŸï¼"<<endl;
 									p=i;
 									break;
 								}
 							}
 						}
 						if(n0==n1||n0<0||n1<0||n0==0||n1==0);
-						else cout<<n0<<"Óë"<<n1<<"µÄ×îĞ¡¹«±¶ÊıÊÇ"<<n0*n1/p<<endl; 
+						else cout<<n0<<"ä¸"<<n1<<"çš„æœ€å°å…¬å€æ•°æ˜¯"<<n0*n1/p<<endl; 
 						system("pause");
-						system("title Kendall OS - Ö÷½çÃæ");
+						system("title Kendall OS - ä¸»ç•Œé¢");
 						system("cls");
 						break;
 					}
 					case 3:{
-						system("title Kendall OS - Ô²");
-						cout<<"ÄãÒª½øĞĞÄÄÖÖ¼ÆËã£¿"<<endl;
-						cout<<"1.¸øÖ±¾¶/°ë¾¶£¬ËãÖÜ³¤"<<endl;
-						cout<<"2.¸øÖ±¾¶/°ë¾¶£¬ËãÃæ»ı"<<endl;
-						cout<<"3.¸øÖÜ³¤£¬ËãÖ±¾¶/°ë¾¶"<<endl;
-				//		cout<<"4.¸øÃæ»ı£¬ËãÖ±¾¶/°ë¾¶"<<endl;
+						system("title Kendall OS - åœ†");
+						cout<<"ä½ è¦è¿›è¡Œå“ªç§è®¡ç®—ï¼Ÿ"<<endl;
+						cout<<"1.ç»™ç›´å¾„/åŠå¾„ï¼Œç®—å‘¨é•¿"<<endl;
+						cout<<"2.ç»™ç›´å¾„/åŠå¾„ï¼Œç®—é¢ç§¯"<<endl;
+						cout<<"3.ç»™å‘¨é•¿ï¼Œç®—ç›´å¾„/åŠå¾„"<<endl;
+				//		cout<<"4.ç»™é¢ç§¯ï¼Œç®—ç›´å¾„/åŠå¾„"<<endl;
 						int Choose3;
 						cin>>Choose3;
 						switch(Choose3){
 							case 1:{
 								double d;
-								cout<<"ÊäÈëÖ±¾¶£º";
+								cout<<"è¾“å…¥ç›´å¾„ï¼š";
 								cin>>d;
-								cout<<"Õâ¸öÔ²µÄÖÜ³¤ÊÇ"<<d*3.14<<endl;
+								cout<<"è¿™ä¸ªåœ†çš„å‘¨é•¿æ˜¯"<<d*3.14<<endl;
 								system("pause");
 								system("cls");
 								break;
 							}
 							case 2:{
 								double r;
-								cout<<"ÊäÈë°ë¾¶£º";
+								cout<<"è¾“å…¥åŠå¾„ï¼š";
 								cin>>r;
-								cout<<"Õâ¸öÔ²µÄÃæ»ıÊÇ"<<r*r*3.14<<endl;
+								cout<<"è¿™ä¸ªåœ†çš„é¢ç§¯æ˜¯"<<r*r*3.14<<endl;
 								system("pause");
 								system("cls");
 								break;
 							}
 							case 3:{
 								double c;
-								cout<<"ÊäÈëÖÜ³¤£º";
+								cout<<"è¾“å…¥å‘¨é•¿ï¼š";
 								cin>>c;
-								cout<<"Õâ¸öÔ²µÄÖ±¾¶ÊÇ"<<c/3.14<<"£¬°ë¾¶ÊÇ"<<c/3.14/2<<endl;
+								cout<<"è¿™ä¸ªåœ†çš„ç›´å¾„æ˜¯"<<c/3.14<<"ï¼ŒåŠå¾„æ˜¯"<<c/3.14/2<<endl;
 								system("pause");
 								system("cls");
 								break;
@@ -246,10 +275,10 @@ int main(){
 							//case 4:{ 
 							case 114514:{
 								double s,a;
-								cout<<"ÕıÔÚµ÷ÊÔµÄÄÚÈİ£¡"<<endl;
-								system("title ÕıÔÚµ÷ÊÔµÄÄÚÈİ£¡");
+								cout<<"æ­£åœ¨è°ƒè¯•çš„å†…å®¹ï¼"<<endl;
+								system("title æ­£åœ¨è°ƒè¯•çš„å†…å®¹ï¼");
 								system("color a0");
-								cout<<"ÊäÈëÃæ»ı£º";
+								cout<<"è¾“å…¥é¢ç§¯ï¼š";
 								cin>>s;
 								for(int i=1;i<=128;i++){
 									a=i*i;
@@ -258,122 +287,122 @@ int main(){
 										break;
 									}
 								}
-								cout<<"Õâ¸öÔ²µÄÖ±¾¶ÊÇ"<<s/3.14/a/a<<"£¬°ë¾¶ÊÇ"<<s/3.14/a/a/2<<endl;
+								cout<<"è¿™ä¸ªåœ†çš„ç›´å¾„æ˜¯"<<s/3.14/a/a<<"ï¼ŒåŠå¾„æ˜¯"<<s/3.14/a/a/2<<endl;
 								system("pause");
 								system("cls");
 								system("color a");
-								system("title Kendall OS - Ô²");
+								system("title Kendall OS - åœ†");
 								break;
 							}
 							case 1919810:{
-								cout<<"ÕıÔÚµ÷ÊÔµÄÄÚÈİ£¡"<<endl;
-								system("title ÕıÔÚµ÷ÊÔµÄÄÚÈİ£¡");
+								cout<<"æ­£åœ¨è°ƒè¯•çš„å†…å®¹ï¼"<<endl;
+								system("title æ­£åœ¨è°ƒè¯•çš„å†…å®¹ï¼");
 								system("color a0");
-								cout<<"Beta°æÔİÊ±²»Ö§³Ö¸Ã¼ÆËã£¬ÈçÓĞÒÑÍê³ÉµÄÇë·¢ËÍÔ´Âë»ò±àÒëºóÄÚÈİÖÁ1848791330@qq.com"<<endl;
+								cout<<"Betaç‰ˆæš‚æ—¶ä¸æ”¯æŒè¯¥è®¡ç®—ï¼Œå¦‚æœ‰å·²å®Œæˆçš„è¯·å‘é€æºç æˆ–ç¼–è¯‘åå†…å®¹è‡³1848791330@qq.com"<<endl;
 								system("pause");
 								system("cls");
 								system("color a");
-								system("title Kendall OS - Ô²");
+								system("title Kendall OS - åœ†");
 								break;
 							}
 							default:{
-								cout<<"Çë°´ÕÕÌáÊ¾ÊäÈë£¡"<<endl;
+								cout<<"è¯·æŒ‰ç…§æç¤ºè¾“å…¥ï¼"<<endl;
 								system("pause");
 								system("cls");
 								break;
 							}
 						}
-						system("title Kendall OS - Ö÷½çÃæ");
+						system("title Kendall OS - ä¸»ç•Œé¢");
 						break;
 					}
 					case 4:{
-						cout<<"ÄãÒª½øĞĞÄÄÖÖ¼ÆËã£¿"<<endl;
-						cout<<"1.¸øµ×ÃæÖ±¾¶/°ë¾¶¡¢¸ß£¬Ëã²àÃæ»ı"<<endl;
-						cout<<"2.¸øµ×ÃæÖ±¾¶/°ë¾¶¡¢¸ß£¬Ëã±íÃæ»ı"<<endl;
-						cout<<"3.¸ø²àÃæ»ı¡¢¸ß£¬Ëãµ×ÃæÖ±¾¶/°ë¾¶"<<endl;
-						cout<<"4.¸ø²àÃæ»ı¡¢µ×ÃæÖ±¾¶/°ë¾¶£¬Ëã¸ß"<<endl;
-						cout<<"5.¸øµ×ÃæÖ±¾¶/°ë¾¶¡¢¸ß£¬ËãÌå»ı"<<endl;
+						cout<<"ä½ è¦è¿›è¡Œå“ªç§è®¡ç®—ï¼Ÿ"<<endl;
+						cout<<"1.ç»™åº•é¢ç›´å¾„/åŠå¾„ã€é«˜ï¼Œç®—ä¾§é¢ç§¯"<<endl;
+						cout<<"2.ç»™åº•é¢ç›´å¾„/åŠå¾„ã€é«˜ï¼Œç®—è¡¨é¢ç§¯"<<endl;
+						cout<<"3.ç»™ä¾§é¢ç§¯ã€é«˜ï¼Œç®—åº•é¢ç›´å¾„/åŠå¾„"<<endl;
+						cout<<"4.ç»™ä¾§é¢ç§¯ã€åº•é¢ç›´å¾„/åŠå¾„ï¼Œç®—é«˜"<<endl;
+						cout<<"5.ç»™åº•é¢ç›´å¾„/åŠå¾„ã€é«˜ï¼Œç®—ä½“ç§¯"<<endl;
 						int Choose;
 						cin>>Choose;
 						switch(Choose){
 							case 1:{
 								double d,h;
-								cout<<"ÊäÈëµ×ÃæÖ±¾¶£º";
+								cout<<"è¾“å…¥åº•é¢ç›´å¾„ï¼š";
 								cin>>d;
-								cout<<"ÊäÈë¸ß£º";
+								cout<<"è¾“å…¥é«˜ï¼š";
 								cin>>h;
-								cout<<"Õâ¸öÔ²ÖùµÄ²àÃæ»ıÊÇ"<<3.14*d*h<<endl;
+								cout<<"è¿™ä¸ªåœ†æŸ±çš„ä¾§é¢ç§¯æ˜¯"<<3.14*d*h<<endl;
 								system("pause");
 								system("cls");
 								break;
 							}
 							case 2:{
 								double d,h;
-								cout<<"ÊäÈëµ×ÃæÖ±¾¶£º";
+								cout<<"è¾“å…¥åº•é¢ç›´å¾„ï¼š";
 								cin>>d;
-								cout<<"ÊäÈë¸ß£º";
+								cout<<"è¾“å…¥é«˜ï¼š";
 								cin>>h;
-								cout<<"Õâ¸öÔ²ÖùµÄ±íÃæ»ıÊÇ"<<(3.14*d/2*d/2)*2+3.14*d*h<<endl;
+								cout<<"è¿™ä¸ªåœ†æŸ±çš„è¡¨é¢ç§¯æ˜¯"<<(3.14*d/2*d/2)*2+3.14*d*h<<endl;
 								system("pause");
 								system("cls");
 								break;
 							}
 							case 3:{
 								double sc,h;
-								cout<<"ÊäÈë²àÃæ»ı£º";
+								cout<<"è¾“å…¥ä¾§é¢ç§¯ï¼š";
 								cin>>sc;
-								cout<<"ÊäÈë¸ß£º";
+								cout<<"è¾“å…¥é«˜ï¼š";
 								cin>>h;
-								cout<<"Õâ¸öÔ²ÖùµÄµ×ÃæÖ±¾¶ÊÇ"<<sc/h/3.14<<"£¬°ë¾¶ÊÇ"<<sc/h/3.14/2<<endl;
+								cout<<"è¿™ä¸ªåœ†æŸ±çš„åº•é¢ç›´å¾„æ˜¯"<<sc/h/3.14<<"ï¼ŒåŠå¾„æ˜¯"<<sc/h/3.14/2<<endl;
 								system("pause");
 								system("cls");
 								break;
 							}
 							case 4:{
 								double sc,d;
-								cout<<"ÊäÈë²àÃæ»ı£º";
+								cout<<"è¾“å…¥ä¾§é¢ç§¯ï¼š";
 								cin>>sc;
-								cout<<"ÊäÈëµ×ÃæÖ±¾¶£º";
+								cout<<"è¾“å…¥åº•é¢ç›´å¾„ï¼š";
 								cin>>d;
-								cout<<"Õâ¸öÔ²ÖùµÄ¸ßÊÇ"<<sc/(3.14*d)<<endl;
+								cout<<"è¿™ä¸ªåœ†æŸ±çš„é«˜æ˜¯"<<sc/(3.14*d)<<endl;
 								system("pause");
 								system("cls");
 								break;
 							}
 							case 5:{
 								double r,h;
-								cout<<"ÊäÈëµ×Ãæ°ë¾¶£º";
+								cout<<"è¾“å…¥åº•é¢åŠå¾„ï¼š";
 								cin>>r;
-								cout<<"ÊäÈë¸ß£º";
+								cout<<"è¾“å…¥é«˜ï¼š";
 								cin>>h;
-								cout<<"Õâ¸öÔ²ÖùµÄÌå»ıÊÇ"<<r*r*3.14*h<<endl;
+								cout<<"è¿™ä¸ªåœ†æŸ±çš„ä½“ç§¯æ˜¯"<<r*r*3.14*h<<endl;
 								system("pause");
 								system("cls");
 								break;
 							}
 							default :{
-								cout<<"Çë°´ÕÕÌáÊ¾ÊäÈë£¡"<<endl;
+								cout<<"è¯·æŒ‰ç…§æç¤ºè¾“å…¥ï¼"<<endl;
 								system("pause");
 								system("cls");
 								break;
 							}
 						}
 						system("cls");
-						system("title Kendall OS - Ö÷½çÃæ");
+						system("title Kendall OS - ä¸»ç•Œé¢");
 						break;
 					}
-					default :cout<<"Ã»ÓĞÕâ¸öÑ¡Ïî£¡"<<endl;system("pause");system("cls");
+					default :cout<<"æ²¡æœ‰è¿™ä¸ªé€‰é¡¹ï¼"<<endl;system("pause");system("cls");
 				}
 				break;
 			}
 			case 4:{
-				system("title Kendall OS - ·êÆß±Ø¹ı");
+				system("title Kendall OS - é€¢ä¸ƒå¿…è¿‡");
 				int i=1,a;
-				cout<<"Êı×Öµ½¼¸£¿";
+				cout<<"æ•°å­—åˆ°å‡ ï¼Ÿ";
 				cin>>a;
 				while(i<a){
 					if(i%10==7||i/10==7||i%7==0){
-						cout<<"¹ı"<<endl;
+						cout<<"è¿‡"<<endl;
 					}
 					else{
 						cout<<i<<endl;
@@ -382,22 +411,22 @@ int main(){
 				}
 				system("pause");
 				system("cls");
-				system("title Kendall OS - Ö÷½çÃæ");
+				system("title Kendall OS - ä¸»ç•Œé¢");
 				break;
 			}
 			case 5:{
-				system("title Kendall OS - ¹ØÓÚ");
+				system("title Kendall OS - å…³äº");
 				cout<<"Kendall OS V1.0.0.0"<<endl;
 				cout<<"Copyright (c) Kendall ZhuXinrong."<<endl;
-				cout<<"Ê¹ÓÃC++ÖÆ×÷"<<endl;
-				cout<<"ÒÑÔÚGitHub¹«²¼Ô´Âë"<<endl;
-				cout<<"²»ÔÊĞíÎ´¾­±¾ÈËĞí¿É×ªÔØ£¡"<<endl;
+				cout<<"ä½¿ç”¨C++åˆ¶ä½œ"<<endl;
+				cout<<"å·²åœ¨GitHubå…¬å¸ƒæºç "<<endl;
+				cout<<"ä¸å…è®¸æœªç»æœ¬äººè®¸å¯è½¬è½½ï¼"<<endl;
 				system("pause");
-				system("title Kendall OS - Ö÷½çÃæ");
+				system("title Kendall OS - ä¸»ç•Œé¢");
 				system("cls");
 				break;
 			}
-			default :cout<<"Ã»ÓĞÕâ¸öÑ¡Ïî£¡"<<endl;system("pause");system("cls");
+			default :cout<<"æ²¡æœ‰è¿™ä¸ªé€‰é¡¹ï¼"<<endl;system("pause");system("cls");
 		}
 	}
 
